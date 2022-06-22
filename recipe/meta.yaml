@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -27,7 +27,8 @@ requirements:
     - python >=3.7
     - roifile
     - scikit-image
-    - tensorflow >=2.5.0
+    - tensorflow >=2.5.0 # [not win]
+    - tensorflow-gpu >=2.5.0 # [win]
     - tifffile
     - qtpy
     - napari
