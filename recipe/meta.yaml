@@ -10,7 +10,6 @@ source:
   sha256: 4e841264004c8e732f10e4f8792631d7cd39d141ea8b987d92f128da54f2ee52
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
@@ -27,8 +26,8 @@ requirements:
     - python >=3.7
     - roifile
     - scikit-image
-    - tensorflow >=2.5.0 # [not win]
-    - tensorflow-gpu >=2.5.0 # [win]
+    - tensorflow >=2.5.0  # [not win]
+    - tensorflow-gpu >=2.5.0  # [win]
     - tifffile
     - qtpy
     - napari
